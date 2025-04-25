@@ -68,7 +68,7 @@ const delay = (ms: number) => new Promise(resolve => setTimeout(resolve, ms));
 // Function to create the articles table if it doesn't exist
 async function createArticlesTable() {
   try {
-    const { data, error } = await supabase
+    await response.json(); // remove unused variable
       .from('articles')
       .select('*')
       .limit(1);
